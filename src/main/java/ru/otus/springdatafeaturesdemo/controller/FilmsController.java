@@ -27,9 +27,9 @@ public class FilmsController {
                                         String directorNamePart,
                                         String genreNamePart,
                                         String actorNamePart) {
-        //var films = filmService.findAllByExample(directorNamePart, genreNamePart, actorNamePart);
-        var films = filmService.findAllBySpecification(directorNamePart,
-                genreNamePart, actorNamePart);
+        var films = filmService.findAllByExample(directorNamePart, genreNamePart, actorNamePart);
+        //var films = filmService.findAllBySpecification(directorNamePart,
+        //        genreNamePart, actorNamePart);
 
         model.addAttribute("films", films);
         model.addAttribute("directorNamePart", directorNamePart);
