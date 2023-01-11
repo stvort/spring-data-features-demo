@@ -39,8 +39,8 @@ public class R__0004_Add_films extends BaseJavaMigration {
         for (int i = 1; i <= FILMS_COUNT; i++) {
             String filmTitle = String.format("Круги на воде #%d", i);
             String filmDescription = filmTitle.repeat( 2000 / filmTitle.length());
-            long genreId = random.nextInt(GENRES_COUNT - 1) + 1;
-            long directorId = random.nextInt(DIRECTORS_COUNT - 1) + 1;
+            long genreId = random.nextInt(GENRES_COUNT) + 1;
+            long directorId = random.nextInt(DIRECTORS_COUNT) + 1;
             params.add(new MapSqlParameterSource("title", filmTitle)
                     .addValue("genreId", genreId)
                     .addValue("directorId", directorId)
